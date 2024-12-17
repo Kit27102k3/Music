@@ -53,13 +53,9 @@ function PaymentPlus() {
   const handleRegister = async () => {
     if (isChecked) {
       try {
-        // const newUpgradeDate = new Date(currentDate);
-        // newUpgradeDate.setMonth(
-        //   newUpgradeDate.getMonth() + selectedPlan.months
-        // );
         const newUpgradeDate = new Date(currentDate);
-        newUpgradeDate.setDate(
-          newUpgradeDate.getDate() + selectedPlan.months
+        newUpgradeDate.setMonth(
+          newUpgradeDate.getMonth() + selectedPlan.months
         );
         const formattedUpgradeDate = newUpgradeDate.toISOString(); 
         const response = await axios.post("http://localhost:3000/api/payment", {
