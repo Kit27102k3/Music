@@ -1,0 +1,35 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+.env
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+
+git init
+git remote add origin https://github.com/Kit27102k3/Music.git
+
+git add .
+git commit -m "Updated handleItemClick to replace spaces with hyphens"
+git push origin main
+=======
+>>>>>>> ad429d0d74454f7a59d5e63c95e11ac61c7eab25

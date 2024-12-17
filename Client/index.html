@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      style="border-radius: 50%"
+      type="image/svg+xml"
+      href="./src/assets/small-logo.svg"
+    />
+    <link rel="stylesheet" href="./src/App.css" />
+    <link rel="stylesheet" href="./src/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+
+    <script type="module" src="./src/main.jsx"></script>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js"
+    ></script>
+    <script>
+      window.fbAsyncInit = function () {
+        FB.init({
+          appId: "419653614413667", // Thay YOUR_APP_ID bằng Facebook App ID của bạn
+          cookie: true,
+          xfbml: true,
+          version: "v12.0",
+        });
+      };
+    </script>
+  </body>
+</html>

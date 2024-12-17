@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.text-shadow-no1 {
+  text-shadow: 1px 1px 0px #4a90e2, -1px 1px 0 #4a90e2, -1px -1px 0 #4a90e2, ,
+    1px -1px 0 #4a90e2;
+  
+}
+
+.text-shadow-no2 {
+  text-shadow: 1px 1px 0px #50e3c2, -1px 1px 0 #50e3c2, -1px -1px 0 #50e3c2, ,
+    1px -1px 0 #50e3c2;
+  
+}
+
+.text-shadow-no3 {
+  text-shadow: 1px 1px 0px #e35050, -1px 1px 0 #e35050, -1px -1px 0 #e35050, ,
+    1px -1px 0 #e35050;
+  
+}
+
+.option-all__song-slider {
+  height: 244px;
+  position: relative;
+  margin-top: 6px;
+}
+
+.option-all__song-slider-img {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform .9s;
+  transition-property: all;
+  transition-duration: 0.9s;
+  transition-timing-function: linear;
+  transition-delay: 0.1s;
+}
+
+.option-all__song-slider-img-first {
+  width: 230px;
+  height: 230px;
+  position: absolute;
+  right: 0;
+  top: 7px;
+  bottom: 7px;
+  z-index: 3;
+  opacity: 1;
+}
+
+.option-all__song-slider-img-second {
+  width: 196px;
+  height: 196px;
+  position: absolute;
+  right: 0px;
+  top: 24px;
+  bottom: 24px;
+  z-index: 2;
+  opacity: 0.7;
+  transform: translateX(-10px);
+}
+
+.option-all__song-slider-img-third {
+  width: 162px;
+  height: 162px;
+  z-index: 1;
+  opacity: 0.3;
+  position: absolute;
+  right: 0;
+  top: 41px;
+  bottom: 41px;
+  transform: translateX(-50px);
+}
+
+.no-favorite-message {
+  text-align: center;
+  width: 100%;
+  padding: 20px;
+  color: #ccc;
+  font-size: 16px;
+}
+
+.favorite-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.favorite-container.empty {
+  height: 200px; /* Giảm chiều cao khi không có bài hát */
+  justify-content: center; /* Căn giữa thông báo */
+}
+
+.google-login-btn {
+  width: 300px;  /* Chiều dài cố định */
+  height: 50px;
+  display: block;
+  margin: 0 auto;  /* Căn giữa nút nếu cần */
+}
+
