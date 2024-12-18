@@ -2,7 +2,7 @@ import { memo, useState, useRef, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import icons from "../ultis/icons";
 import axios from "axios";
-import { toast } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 
 const { AiOutlineHeart, BsFillPlayFill, BsThreeDots } = icons;
 
@@ -29,6 +29,9 @@ function SectionItem({
     const encodeId = sectionData.encodeId;
     const userAccount = JSON.parse(localStorage.getItem("account"));
     const userId = userAccount.userId;
+    if (!userId) {
+      toast.error("Bạn cần phải đăng nhập trước!");
+    }
     if (!isFavorite) {
       await addFavoritePlaylist();
     } else {
