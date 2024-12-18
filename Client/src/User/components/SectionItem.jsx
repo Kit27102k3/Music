@@ -58,11 +58,11 @@ function SectionItem({
 
   const addFavoritePlaylist = async () => {
     const userAccount = JSON.parse(localStorage.getItem("account"));
-    if (!userAccount) {
+    const userId = userAccount.userId;
+    if (!userAccount && userId) {
       toast.error("Không tìm thấy thông tin người dùng.");
-      return;
+      // return;
     }
-    const { userId } = userAccount;
     const payload = {
       title,
       thumbnailM,
@@ -110,7 +110,7 @@ function SectionItem({
         setIsFavorite(isCurrentFavorite);
       }
     } catch (error) {
-      console.error("Error fetching favorite playlists:", error);
+      console.error("Lỗi khi tìm nạp danh sách phát yêu thích:", error);
     }
   };
 
@@ -131,6 +131,7 @@ function SectionItem({
       }
       className="flex flex-col flex-auto gap-3 text-sm cursor-pointer"
     >
+      <ToastContainer />
       <div
         onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
