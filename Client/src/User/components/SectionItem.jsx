@@ -29,9 +29,6 @@ function SectionItem({
     const encodeId = sectionData.encodeId;
     const userAccount = JSON.parse(localStorage.getItem("account"));
     const userId = userAccount.userId;
-    if (!userId) {
-      toast.error("Bạn cần phải đăng nhập trước!");
-    }
     if (!isFavorite) {
       await addFavoritePlaylist();
     } else {
@@ -80,7 +77,6 @@ function SectionItem({
     if (sortDescription) {
       payload.sortDescription = sortDescription;
     }
-
     try {
       const response = await axios.post(
         "http://localhost:3000/api/detailplaylist/favorites",

@@ -21,8 +21,10 @@ function FavoritePlaylist() {
         <h2 className="text-2xl uppercase font-bold mb-5">
           PlayList Yêu Thích
         </h2>
-        <button 
-        className="text-xs hover:text-pink-500 uppercase">
+        <button
+          onClick={() => navigate("/favorite-songs")}
+          className="text-xs hover:text-pink-500 uppercase"
+        >
           Tất cả
         </button>
       </div>
