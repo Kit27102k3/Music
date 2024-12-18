@@ -41,56 +41,56 @@ function PlayBack({ setIsShowRightSidebar }) {
 
   useEffect(() => {
     const fetchDetailSong = async () => {
-      audioRef.current.pause();   // Dừng phát nhạc
-      audioRef.current.src = "";  // Set giá trị source âm thâm là rỗng để khi bấm bài hát khác thì không phát
-      setIsLoadedSource(false);   // Load source bài hát mới
+      audioRef.current.pause();
+      audioRef.current.src = "";
+      setIsLoadedSource(false);
 
       const [res1, res2] = await Promise.all([
-        apis.apiGetDetailSong(curSongId), // Lấy thông tin bài hát dựa theo Id của bài hát
-        apis.apiGetSong(curSongId),   // Lấy bài hát
+        apis.apiGetDetailSong(curSongId),
+        apis.apiGetSong(curSongId),
       ]);
       // console.log(res1.data.data);
-      setIsLoadedSource(true);  // khi lấy hoàn tất thông tin thì set load source bài hát lại thành true
-      if (res1.data.err === 0) {    // Kiểm tra xem có lấy thông tin thành công không
-        setSongInfo(res1.data.data);  // lưu thông tin bài hát vào biến songInfo
-        dispatch(actions.setCurSongData(res1.data.data)); // thực hiện hành động đến store trong redux để lưu thông tin bài hát trong redux dưới local
+      setIsLoadedSource(true);
+      if (res1.data.err === 0) {
+        setSongInfo(res1.data.data);
+        dispatch(actions.setCurSongData(res1.data.data));
       }
 
       if (res2.data.err === 0) {
-        audioRef.current.src = res2.data.data["128"]; //Đường dẫn 128 là đường dẫn dành cho bài hát bth, đường đãn 320 là dành cho VIP
+        audioRef.current.src = res2.data.data["128"];
         if (isPlaying) {
-          audioRef.current.play();  // Nếu là đang chơi thì phát nhạc
+          audioRef.current.play();
         }
       } else {
-        audioRef.current.pause();   // Dừng phát nhạc
-        dispatch(actions.play(false));  //Cật nhật lại trạng tháu dừng phát nhạc
-        toast.warning(res2.data.msg);   //Hiển thị thông báo đây là bài hát VIP
-        setCurSeconds(0);   // Cập nhật thanh tgian lại = 0
-        thumbRef.current.style.cssText = `right: 100%`; // nó sẽ chạy đến hết tgain của bài hát
+        audioRef.current.pause();
+        dispatch(actions.play(false));
+        toast.warning(res2.data.msg);
+        setCurSeconds(0);
+        thumbRef.current.style.cssText = `right: 100%`;
       }
     };
-    fetchDetailSong();  // Gọi lại hàm 
+    fetchDetailSong();
     return () => {
-      audioRef.current.pause();   //Dừng phát nhạc
-      clearInterval(intervalId);  //Cler Id của bài hát củ
+      audioRef.current.pause();
+      clearInterval(intervalId);
     };
-  }, [curSongId]);  //Cập nhật lại id khi bài hát thay đổi
+  }, [curSongId]);
 
   useEffect(() => {
-    intervalId && clearInterval(intervalId);  //Nếu intervalId khác null hoặc undefined sẽ Clear sẽ được gọi trong khoảng tgain đang chạy
-    audioRef.current.pause();  // Khi gọi hàm thì thực hiện hành động dừng phát
-    if (isPlaying && thumbRef.current) {    // nếu chơi nhạc và thanh tgain là true
-      audioRef.current.play();  // thì phát nhạc
-      intervalId = setInterval(() => { 
-        let percent =   // Tạo biến để lưu tgian phát
+    intervalId && clearInterval(intervalId);
+    audioRef.current.pause();
+    if (isPlaying && thumbRef.current) {
+      audioRef.current.play();
+      intervalId = setInterval(() => {
+        let percent =
           Math.round(
             (audioRef.current.currentTime * 10000) / songInfo?.duration
           ) / 100;
         thumbRef.current.style.cssText = `right: ${100 - percent}%`;
         setCurSeconds(Math.round(audioRef.current.currentTime));
-      }, 50); // thực thi đoạn mã này 50 mili giây để thanh tgian chạy mượt hơn
+      }, 50);
     }
-    return () => clearInterval(intervalId); 
+    return () => clearInterval(intervalId);
   }, [isPlaying, songInfo?.duration]);
 
   useEffect(() => {
