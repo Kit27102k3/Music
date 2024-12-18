@@ -28,7 +28,7 @@ function SectionItem({
     e.stopPropagation();
     const encodeId = sectionData.encodeId;
     const userAccount = JSON.parse(localStorage.getItem("account"));
-    const userId = userAccount.userId;
+    const userId = userAccount?.userId;
     if (!isFavorite) {
       await addFavoritePlaylist();
     } else {
@@ -58,10 +58,10 @@ function SectionItem({
 
   const addFavoritePlaylist = async () => {
     const userAccount = JSON.parse(localStorage.getItem("account"));
-    const userId = userAccount.userId;
-    if (!userAccount && userId) {
+    const userId = userAccount?.userId;
+    if (!userId) {
       toast.error("Không tìm thấy thông tin người dùng.");
-      // return;
+      return;
     }
     const payload = {
       title,

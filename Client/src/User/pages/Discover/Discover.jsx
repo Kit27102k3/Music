@@ -75,9 +75,9 @@ export default function Discover() {
       min = min === sliderEls.length - 1 ? 0 : min + 1;
       max = max === sliderEls.length - 1 ? 0 : max + 1;
     }, 3000);
-    if (banner) {
+    // if (banner) {
       setIsLoading(false);
-    }
+    // }
     return () => {
       clearInterval(intervalId);
     };
