@@ -42,8 +42,8 @@ function PlayBack({ setIsShowRightSidebar }) {
   useEffect(() => {
     const fetchDetailSong = async () => {
       audioRef.current.pause();
-      audioRef.current.src = "";
       setIsLoadedSource(false);
+      audioRef.current.src = "";
 
       const [res1, res2] = await Promise.all([
         apis.apiGetDetailSong(curSongId),
