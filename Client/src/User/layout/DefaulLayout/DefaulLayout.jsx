@@ -36,11 +36,11 @@ const DefaultLayout = ({ children }) => {
       className={`${textColor} flex flex-col fixed w-full h-screen bg-cover`}
     >
       <div className="w-full h-full flex flex-auto">
-        <div className="w-[240px] min-h-screen flex-none border border-blue-500">
+        <div className="w-[240px] min-h-screen flex-none border-r">
           <Sidebar />
         </div>
         <div
-          className={`flex-auto flex flex-col border border-red-500 ${textColor}`}
+          className={`flex-auto flex flex-col border-r ${textColor}`}
         >
           <div className="flex-none">
             <Header onChangeBackground={handleChangeBackground} />

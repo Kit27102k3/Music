@@ -9,7 +9,8 @@ import {
   faHeart,
   faMusic,
 } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../../assets/logo-dark.svg";
+import logo from "../../../assets/Logo-DH-Nam-Can-Tho-NCTU.webp";
+import Mp3 from "../../../assets/Mp3.png";
 import "../../../index.css";
 import Scrollbars from "react-custom-scrollbars-2";
 
@@ -23,8 +24,18 @@ export default function Sidebar() {
       <nav className="w-full bg-card ">
         <ul>
           <li>
-            <span className={`${formatSidebar} cursor-text`}>
-              <img src={logo} alt="ZingMP3" className="w-[140px] h-[70px]" />
+            <span className={`${formatSidebar} cursor-text flex relative`}>
+              <img
+                src={logo}
+                alt="ZingMP3"
+                className="w-[100px] h-[100px] relative z-10"
+              />
+              <img
+                src={Mp3}
+                alt=""
+                width={40}
+                className="h-12 absolute bottom-[30px] right-[38%] z-0"
+              />
             </span>
           </li>
           {[

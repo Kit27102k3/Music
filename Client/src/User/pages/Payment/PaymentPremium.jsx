@@ -3,7 +3,8 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import logo from "../../../assets/logo-dark.svg";
+import logo from "../../../assets/Logo-DH-Nam-Can-Tho-NCTU.webp";
+import Mp3 from "../../../assets/Mp3.png";
 
 const formatSidebar =
   "text-muted-foreground w-full block p-4 hover:text-foreground duration-300 cursor-pointer relative";
@@ -123,12 +124,24 @@ function PaymentPremium() {
     <div className="bg-gradient-to-r from-[#181818] to-[#BA8B02] min-h-screen">
       <div className="container mx-auto">
         <a href="/vip/upgrade" className={`${formatSidebar}  ml-12`}>
-          <img src={logo} alt="ZingMP3" className="w-[140px] h-[70px]" />
+        <span className={`${formatSidebar} cursor-text flex relative`}>
+              <img
+                src={logo}
+                alt="ZingMP3"
+                className="w-[100px] h-[100px] relative z-10"
+              />
+              <img
+                src={Mp3}
+                alt=""
+                width={40}
+                className="h-12 absolute bottom-[30px] right-[87%] z-0"
+              />
+            </span>
         </a>
       </div>
       <div className="text-black px-[200px] py-[50px]">
         <h2 className="text-5xl flex items-center gap-2 font-semibold mb-10 text-yellow-500 ">
-          Zing MP3{" "}
+          DNC MP3{" "}
           <span className="text-sm bg-yellow-500 p-2 rounded-lg text-white font-bold">
             {type === "plus" ? "PLUS" : "PREMIUM"}
           </span>
