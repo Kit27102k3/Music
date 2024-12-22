@@ -17,7 +17,7 @@ function Payment() {
             <span className={`${formatSidebar} cursor-text flex relative`}>
               <img
                 src={logo}
-                alt="ZingMP3"
+                alt="DNCMP3"
                 className="w-[100px] h-[100px] relative z-10"
               />
               <img
@@ -39,7 +39,7 @@ function Payment() {
         <div className="flex justify-center space-x-4 h-full w-full ">
           <div className="bg-purple-600 text-white p-6 rounded-lg shadow-lg w-[504px] h-[636px] animate-slide-right">
             <h2 className="text-2xl font-semibold mb-2 text-[34px]">
-              Zing MP3{" "}
+              DNC MP3{" "}
               <span className="text-sm bg-white p-1 rounded-lg text-purple-900 font-bold">
                 PLUS
               </span>
@@ -106,7 +106,7 @@ function Payment() {
             className="text-white p-6 rounded-lg shadow-lg w-[504px] h-[636px] animate-slide-left"
           >
             <h2 className="text-2xl font-semibold mb-2 text-[34px]">
-              Zing MP3{" "}
+              DNC MP3{" "}
               <span className="text-sm bg-white p-1 rounded-lg text-yellow-900 font-bold">
                 PREMIUM
               </span>
