@@ -125,7 +125,7 @@ function PaymentQRCodePlus() {
             <div className="mt-6">
               <span className="text-muted font-bold text-lg">Sản phẩm</span>
               <div className="mt-1 flex justify-between items-center">
-                <p>Zing MP3 PLUS - {name}</p>
+                <p>DNC MP3 PLUS - {name}</p>
                 <p className="block text-primary font-bold">{amount}</p>
               </div>
               <p className="text-muted text-sm mt-1">

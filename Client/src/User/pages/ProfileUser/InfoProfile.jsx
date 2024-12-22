@@ -104,7 +104,7 @@ export default function InfoProfile() {
       <h3 className="text-lg font-semibold mb-2">Nâng cấp gói</h3>
       <div className="mb-4 text-xs">
         <h4 className="text-purple-800 text-2xl ml-4 font-bold mb-1">
-          Zing MP3{" "}
+          DNC MP3{" "}
           <span className="font-bold bg-purple-400 px-2 rounded-lg">PLUS</span>
         </h4>
         <p className="text-muted-foreground ml-4">Chi từ 13,000đ/tháng</p>
@@ -120,7 +120,7 @@ export default function InfoProfile() {
       </div>
       <div className="text-xs">
         <h4 className="text-yellow-300 text-2xl ml-4 font-bold mb-1">
-          Zing MP3{" "}
+          DNC MP3{" "}
           <span className="font-bold bg-yellow-500 px-1 rounded-lg text-white">
             PREMIUM
           </span>

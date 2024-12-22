@@ -57,7 +57,7 @@ export default function Contact() {
           <h1 className="text-2xl text-left font-bold">LIÊN HỆ VỚI CHÚNG TÔI</h1>
           <p className="mt-2 text-muted-foreground mb-2">
             Chúng tôi luôn ghi nhận các đóng góp ý kiến của bạn để cải tiến sản
-            phẩm Zing MP3 ngày một hoàn thiện và hữu ích hơn. Đừng ngại chia sẻ
+            phẩm DNC MP3 ngày một hoàn thiện và hữu ích hơn. Đừng ngại chia sẻ
             ý tưởng cho chúng tôi.
           </p>
           <span className="text-muted font-bold">

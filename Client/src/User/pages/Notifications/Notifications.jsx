@@ -9,7 +9,7 @@ import image8 from "../../../assets/background-theme/backroundThemes/7.jpg";
 
 function Notifications({ onChangeBackground }) {
   const topics = [
-    { src: image1, alt: "Zing Music Awards", label: "Zing Music Awards" },
+    { src: image1, alt: "DNC Music Awards", label: "DNC Music Awards" },
     { src: image2, alt: "Tháp Eiffel", label: "Tháp Eiffel" },
   ];
 

@@ -129,7 +129,7 @@ export default function Login() {
             <a className={`${formatSidebar} cursor-pointer`}>
               <img
                 src={logo}
-                alt="ZingMP3"
+                alt="DNCMP3"
                 className="w-[240px] h-[100px] ml-20"
               />
             </a>

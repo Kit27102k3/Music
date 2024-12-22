@@ -27,7 +27,7 @@ export default function Sidebar() {
             <span className={`${formatSidebar} cursor-text flex relative`}>
               <img
                 src={logo}
-                alt="ZingMP3"
+                alt="DNCMP3"
                 className="w-[100px] h-[100px] relative z-10"
               />
               <img
