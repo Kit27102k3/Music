@@ -1,6 +1,6 @@
 import { NavLink, useNavigate } from "react-router-dom";
 import { useCallback } from "react";
-import logo from "../../assets/logo-dark.svg";
+import logo from "../../assets/Logo.png";
 
 const formatSidebar =
   "text-muted-foreground w-full block p-4 hover:text-foreground duration-300 cursor-pointer relative";

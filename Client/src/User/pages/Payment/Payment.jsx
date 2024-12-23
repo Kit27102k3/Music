@@ -1,8 +1,7 @@
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate } from "react-router-dom";
-import logo from "../../../assets/Logo-DH-Nam-Can-Tho-NCTU.webp";
-import Mp3 from "../../../assets/Mp3.png";
+import logo from "../../../assets/Logo.png";
 
 const formatSidebar =
   "text-muted-foreground w-full block p-4 hover:text-foreground duration-300 cursor-pointer relative";
@@ -14,18 +13,8 @@ function Payment() {
       <div className="text-black p-8 mx-auto container">
         <div className="">
           <a href="/" className={`${formatSidebar} cursor-pointer ml-12`}>
-            <span className={`${formatSidebar} cursor-text flex relative`}>
-              <img
-                src={logo}
-                alt="DNCMP3"
-                className="w-[100px] h-[100px] relative z-10"
-              />
-              <img
-                src={Mp3}
-                alt=""
-                width={40}
-                className="h-12 absolute bottom-[30px] right-[86%] z-0"
-              />
+            <span className={`${formatSidebar} cursor-text`}>
+              <img src={logo} alt="DNCMP3" className="w-[120px] h-[120px] " />
             </span>
           </a>
         </div>

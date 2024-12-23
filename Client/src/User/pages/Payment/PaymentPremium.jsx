@@ -3,8 +3,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
-import logo from "../../../assets/Logo-DH-Nam-Can-Tho-NCTU.webp";
-import Mp3 from "../../../assets/Mp3.png";
+import logo from "../../../assets/Logo.png";
 
 const formatSidebar =
   "text-muted-foreground w-full block p-4 hover:text-foreground duration-300 cursor-pointer relative";
@@ -129,12 +128,6 @@ function PaymentPremium() {
                 src={logo}
                 alt="DNCMP3"
                 className="w-[100px] h-[100px] relative z-10"
-              />
-              <img
-                src={Mp3}
-                alt=""
-                width={40}
-                className="h-12 absolute bottom-[30px] right-[87%] z-0"
               />
             </span>
         </a>

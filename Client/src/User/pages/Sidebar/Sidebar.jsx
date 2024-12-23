@@ -9,8 +9,7 @@ import {
   faHeart,
   faMusic,
 } from "@fortawesome/free-solid-svg-icons";
-import logo from "../../../assets/Logo-DH-Nam-Can-Tho-NCTU.webp";
-import Mp3 from "../../../assets/Mp3.png";
+import logo from "../../../assets/Logo.png";
 import "../../../index.css";
 import Scrollbars from "react-custom-scrollbars-2";
 
@@ -30,12 +29,7 @@ export default function Sidebar() {
                 alt="DNCMP3"
                 className="w-[100px] h-[100px] relative z-10"
               />
-              <img
-                src={Mp3}
-                alt=""
-                width={40}
-                className="h-12 absolute bottom-[30px] right-[38%] z-0"
-              />
+              
             </span>
           </li>
           {[

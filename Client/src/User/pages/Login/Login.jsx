@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { GoogleLogin } from "@react-oauth/google";
 import { useNavigate } from "react-router-dom";
-import logo from "../../../assets/logo-dark.svg";
+import logo from "../../../assets/Logo.png";
 import { toast } from "react-toastify";
 
 const formatSidebar =
