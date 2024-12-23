@@ -66,7 +66,7 @@ export default function InfoProfile() {
   };
 
   return (
-    <div className="bg-purple-600 scrollable w-72 p-4 rounded-lg shadow-lg h-96 overflow-y-auto">
+    <div className="bg-purple-600 scrollable w-[300px] p-4 rounded-lg shadow-lg h-96 overflow-y-auto">
       <div className="flex items-center mb-4">
         {account ? (
           <>

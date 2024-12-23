@@ -23,11 +23,11 @@ export default function Sidebar() {
       <nav className="w-full bg-card ">
         <ul>
           <li>
-            <span className={`${formatSidebar} cursor-text flex relative`}>
+            <span className={`${formatSidebar} cursor-text `}>
               <img
                 src={logo}
                 alt="DNCMP3"
-                className="w-[100px] h-[100px] relative z-10"
+                className="w-[120px] h-[120px]"
               />
               
             </span>
@@ -140,7 +140,7 @@ export default function Sidebar() {
                     </li>
                   ))}
                 </ul>
-                <div className="h-[40px]"></div>
+                <div className="h-[60px]"></div>
               </nav>
             </Scrollbars>
           </ul>

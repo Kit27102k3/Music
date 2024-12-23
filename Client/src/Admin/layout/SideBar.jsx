@@ -20,7 +20,7 @@ export default function Sidebar() {
         <ul>
           <li>
             <span className={`${formatSidebar} cursor-text`}>
-              <img src={logo} alt="DncMP3" className="w-[140px] h-[70px]" />
+              <img src={logo} alt="DncMP3" className="w-[160px] h-[160px]"/>
             </span>
           </li>
           {[

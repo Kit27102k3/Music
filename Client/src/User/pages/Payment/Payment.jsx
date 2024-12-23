@@ -4,18 +4,16 @@ import { useNavigate } from "react-router-dom";
 import logo from "../../../assets/Logo.png";
 
 const formatSidebar =
-  "text-muted-foreground w-full block p-4 hover:text-foreground duration-300 cursor-pointer relative";
+  "p-4 hover:text-foreground duration-300 cursor-pointer relative";
 
 function Payment() {
   const navigate = useNavigate();
   return (
     <div className="bg-gradient-to-r from-white via-lightblue-400 to-blue-700 min-h-screen">
       <div className="text-black p-8 mx-auto container">
-        <div className="">
-          <a href="/" className={`${formatSidebar} cursor-pointer ml-12`}>
-            <span className={`${formatSidebar} cursor-text`}>
-              <img src={logo} alt="DNCMP3" className="w-[120px] h-[120px] " />
-            </span>
+        <div className="w-48 ml-16">
+          <a href="/" className={` cursor-pointer`}>
+            <img src={logo} alt="DNCMP3" className="w-[160px] h-[160px] " />
           </a>
         </div>
         <h1 className="text-4xl font-sans font-bold text-foreground mb-6 ml-16 animate-slide-left">

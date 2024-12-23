@@ -120,19 +120,13 @@ function PaymentPremium() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-[#181818] to-[#BA8B02] min-h-screen">
-      <div className="container mx-auto">
-        <a href="/vip/upgrade" className={`${formatSidebar}  ml-12`}>
-        <span className={`${formatSidebar} cursor-text flex relative`}>
-              <img
-                src={logo}
-                alt="DNCMP3"
-                className="w-[100px] h-[100px] relative z-10"
-              />
-            </span>
+    <div className="bg-gradient-to-r from-[#181818] to-[#BA8B02] h-full">
+      <div className="container mx-auto w-48 ml-48 py-10">
+        <a href="/vip/upgrade" className={` cursor-pointer`}>
+          <img src={logo} alt="DNCMP3" className="w-[160px] h-[160px] " />
         </a>
       </div>
-      <div className="text-black px-[200px] py-[50px]">
+      <div className="text-black px-[200px] py-[10px]">
         <h2 className="text-5xl flex items-center gap-2 font-semibold mb-10 text-yellow-500 ">
           DNC MP3{" "}
           <span className="text-sm bg-yellow-500 p-2 rounded-lg text-white font-bold">

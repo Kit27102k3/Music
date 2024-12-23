@@ -57,7 +57,7 @@ function PaymentPlus() {
         newUpgradeDate.setMonth(
           newUpgradeDate.getMonth() + selectedPlan.months
         );
-        const formattedUpgradeDate = newUpgradeDate.toISOString(); 
+        const formattedUpgradeDate = newUpgradeDate.toISOString();
         const response = await axios.post("http://localhost:3000/api/payment", {
           userName,
           userId,
@@ -116,25 +116,23 @@ function PaymentPlus() {
     const newUpgradeDate = new Date(currentDate);
     newUpgradeDate.setMonth(newUpgradeDate.getMonth() + plan.months);
     setUpgradeDate(newUpgradeDate.toLocaleDateString());
-  };  
-  
+  };
+
   return (
     <div className="bg-gradient-to-r from-white via-lightblue-400 to-blue-700 min-h-screen">
       <div className="container mx-auto">
-        <a href="/vip/upgrade" className={`${formatSidebar}  ml-12`}>
-        <span className={`${formatSidebar} cursor-text flex relative`}>
-              <img
-                src={logo}
-                alt="DNCMP3"
-                className="w-[100px] h-[100px] relative z-10"
-              />
-            </span>
+        <a href="/vip/upgrade" className={`ml-12`}>
+          <img
+            src={logo}
+            alt="DNCMP3"
+            className="w-[160px] h-[160px]"
+          />
         </a>
       </div>
-      <div className="text-black px-[200px] py-[50px]">
-        <h2 className="text-5xl flex items-center gap-2 font-semibold mb-10 text-blue-500 ">
-          DNC MP3{" "}
-          <span className="text-sm bg-blue-500 p-2 rounded-lg text-white font-bold">
+      <div className="text-black px-[200px] py-[20px]">
+        <h2 className="text-5xl flex items-center gap-2 font-semibold font mb-10 text-blue-500 ">
+          DNC Mp3{" "}
+          <span className="text-[20px] bg-blue-500 p-2 w-24 text-center rounded-lg text-white font-bold">
             {type === "premium" ? "PREMIUM" : "PLUS"}
           </span>
         </h2>
