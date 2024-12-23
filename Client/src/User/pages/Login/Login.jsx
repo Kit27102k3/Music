@@ -116,7 +116,7 @@ export default function Login() {
     <div className="flex md:flex-row h-screen bg-gradient-to-r from-blue-400 to-purple-500 rounded-r-full">
       <div className="flex-1 bg-gradient-to-r from-blue-500 to-purple-500 flex items-center rounded-r-full justify-center">
         <div className="text-white text-4xl font-bold">
-          WELCOME TO ZING
+          WELCOME TO DNC
           <p className="text-sm mt-2">
             Đăng ký với thông tin cá nhân của bạn để sử dụng tất cả các tính
             năng của trang web.
@@ -130,7 +130,7 @@ export default function Login() {
               <img
                 src={logo}
                 alt="DNCMP3"
-                className="w-[240px] h-[100px] ml-20"
+                className="w-[160px] h-[160px] ml-20"
               />
             </a>
           </span>

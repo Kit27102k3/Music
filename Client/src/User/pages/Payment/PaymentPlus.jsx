@@ -119,9 +119,9 @@ function PaymentPlus() {
   };
 
   return (
-    <div className="bg-gradient-to-r from-white via-lightblue-400 to-blue-700 min-h-screen">
-      <div className="container mx-auto">
-        <a href="/vip/upgrade" className={`ml-12`}>
+    <div className="bg-gradient-to-r from-white via-lightblue-400 to-blue-700 h-full py-10">
+      <div className="ml-48 w-48">
+        <a href="/vip/upgrade" className={`cursor-pointer`}>
           <img
             src={logo}
             alt="DNCMP3"
