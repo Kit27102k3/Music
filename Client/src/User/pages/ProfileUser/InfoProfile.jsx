@@ -97,7 +97,7 @@ export default function InfoProfile() {
       </div>
       <button
         onClick={() => navigate("/vip/upgrade")}
-        className="bg-purple-400 rounded-full text-secondary-foreground w-full p-2 mb-4"
+        className="bg-purple-400 rounded-full text-secondary-foreground w-full p-2 mb-4 outline-none"
       >
         Nâng cấp tài khoản
       </button>
