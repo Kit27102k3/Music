@@ -27,7 +27,6 @@ function PaymentQRCode() {
       toast.warning("Không tìm thấy thông tin người dùng.");
       return;
     }
-
     try {
       const response = await fetch(
         `http://localhost:3000/api/payments/user/${storeUser.userId}`,
@@ -36,7 +35,7 @@ function PaymentQRCode() {
         }
       );
       if (response.ok) {
-        toast.success("Giao dịch đã bị hủy thành công.");
+        toast.success("Hủy giao dịch thành công.");
         navigate("/vip/upgrade");
       } else {
         const error = await response.json();
@@ -69,7 +68,7 @@ function PaymentQRCode() {
 
   useEffect(() => {
     if (timeLeft <= 0) {
-      navigate(-1);
+      confirmCancel();
       return;
     }
     const interval = setInterval(() => {

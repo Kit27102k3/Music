@@ -69,7 +69,7 @@ function PaymentQRCodePlus() {
 
   useEffect(() => {
     if (timeLeft <= 0) {
-      navigate(-1);
+      confirmCancel();
       return;
     }
     const interval = setInterval(() => {
